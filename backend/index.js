@@ -2,11 +2,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const app = express();
+const pinRoute = require('./routes/pins');
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URL);
+app.use(express.json());
 
-app.listen(8800, () => {
-    console.log(`Backend running on port 8800...`);
+mongoose.connect(process.env.MONGO_URL).then(() => {
+    console.log("MongoDB connected successfully...")
+}).catch(error => console.log(error));
+
+app.use("/api/pins", pinRoute);
+
+app.listen(5000, () => {
+    console.log(`Backend running on port 5000...`);
 })

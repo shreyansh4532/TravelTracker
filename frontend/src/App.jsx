@@ -2,11 +2,8 @@
 
 function App() {
 
-  return (
-    <div>
-      hello
-    </div>
-  )
+  return (<></>)
+  
 }
 
 export default App

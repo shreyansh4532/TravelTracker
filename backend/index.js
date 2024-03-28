@@ -6,7 +6,6 @@ const pinRoute = require('./routes/pins');
 const userRoute = require('./routes/users');
 
 dotenv.config();
-
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL).then(() => {

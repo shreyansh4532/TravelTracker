@@ -27,9 +27,9 @@
 
 label {
     width: max-content;
-    color: tomato;
+    color: rgb(9, 42, 141);
     font-size: 13px;
-    border-bottom: .5px solid tomato;
+    border-bottom: .5px solid rgb(9, 42, 114);
     margin: 3px 0;
 }
 
@@ -48,4 +48,30 @@ label {
 
 .date {
     font-size: 12px;
+}
+
+form {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input, textarea {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+input::placeholder, textarea::placeholder {
+    font-size: 12px;
+    color: rgb(190, 183, 183);
+}
+
+.submitButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(15, 135, 234);
 }
